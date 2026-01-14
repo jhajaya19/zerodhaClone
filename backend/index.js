@@ -19,7 +19,7 @@ const uri = process.env.MONGO_URL;
 const app = express();
 
 app.use(cors({
-  origin: ['https://zerodha-ft.netlify.app/', "https://zerodha-db.netlify.app/"], // Allow all origins (you can restrict this to specific domains in production)
+  origin: ['https://zerodha-ft.netlify.app', "https://zerodha-db.netlify.app"], // Allow all origins (you can restrict this to specific domains in production)
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization', 'x-auth-token'],
   credentials: true
