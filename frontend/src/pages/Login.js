@@ -31,7 +31,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "http://localhost:3002/login",
+        "https://zerodha-bd.netlify.app/login",
         {
           ...inputValue,
         },
@@ -46,7 +46,7 @@ const Login = () => {
         // window.location.href = `http://localhost:3000`
         if (token) {
           localStorage.setItem("token", token); 
-          window.location.href = `http://localhost:3000?token=${token}`; 
+          window.location.href = `https://zerodha-db.netlify.app?token=${token}`; 
         }  
       } else {
         handleError(message);

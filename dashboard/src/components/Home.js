@@ -24,13 +24,13 @@ const Home = () => {
       console.log("Stored token:", token); 
 
       if (!token) {
-        window.location.href = "http://localhost:3001";
+        window.location.href = "https://zerodha-ft.netlify.app";
         
         return;
       }
 
       try {
-        const res = await fetch("http://localhost:3002/verify", {
+        const res = await fetch("https://zerodha-bd.netlify.app/verify", {
           method: "POST",
           headers: {
             Authorization: `Bearer ${token}`,
@@ -44,11 +44,11 @@ const Home = () => {
         if (res.status === 200) {
           setIsVerified(true);
         } else {
-          window.location.href = "http://localhost:3001";
+          window.location.href = "https://zerodha-ft.netlify.app";
         }
       } catch (err) {
         console.error("Verification failed:", err);
-        window.location.href = "http://localhost:3001";
+        window.location.href = "https://zerodha-ft.netlify.app/";
       }
     };
 

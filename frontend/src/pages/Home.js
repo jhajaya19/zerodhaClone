@@ -15,7 +15,7 @@ const Home = () => {
         navigate("/login");
       }
       const { data } = await axios.post(
-        "http://localhost:3002/verify",
+        "https://zerodha-bd.netlify.app/verify",
         {},
         { withCredentials: true }
       );
