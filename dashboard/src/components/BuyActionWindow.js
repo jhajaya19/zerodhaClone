@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 
 import axios from "axios";
@@ -12,18 +12,18 @@ const BuyActionWindow = ({ uid }) => {
   const [stockPrice, setStockPrice] = useState(0.0);
   const {closeBuyWindow} = useContext(GeneralContext);
 
-  const handleBuyClick = () => {
-    try{
-    axios.post("https://zerodhaclone-bd.onrender.com/newOrder", {
-      name: uid,
-      qty: stockQuantity,
-      price: stockPrice,
-      mode: "BUY",
-    });
-
-    closeBuyWindow();
+  const handleBuyClick = async () => {
+    try {
+      await axios.post("https://zerodhaclone-bd.onrender.com/newOrder", {
+        name: uid,
+        qty: parseFloat(stockQuantity),
+        price: parseFloat(stockPrice),
+        mode: "BUY",
+      });
+      closeBuyWindow();
     } catch (err) {
       console.error("Buy failed", err);
+      alert("Failed to place order. Please try again.");
     }
   };
 

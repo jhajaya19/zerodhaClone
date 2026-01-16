@@ -6,9 +6,21 @@ import { useState } from "react";
 const Orders = () => {
 
   const [allOrders , setAllOrders] = useState([]);
-  useEffect( ()=>{axios.get("https://zerodhaclone-bd.onrender.com/getOrders").then((res)=>{
-    setAllOrders(res.data);
- })},[]);
+  
+  useEffect(() => {
+    const fetchOrders = () => {
+      axios.get("https://zerodhaclone-bd.onrender.com/getOrders")
+        .then((res) => {
+          setAllOrders(res.data);
+        })
+        .catch((err) => console.error("Error fetching orders:", err));
+    };
+
+    fetchOrders();
+    // Poll for new orders every 1 second
+    const interval = setInterval(fetchOrders, 1000);
+    return () => clearInterval(interval);
+  }, []);
   return (
     <div className="orders">
         <h3 className="title">Orders ({allOrders.length})</h3>
