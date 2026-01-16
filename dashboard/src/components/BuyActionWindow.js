@@ -10,8 +10,10 @@ import "./BuyActionWindow.css";
 const BuyActionWindow = ({ uid }) => {
   const [stockQuantity, setStockQuantity] = useState(1);
   const [stockPrice, setStockPrice] = useState(0.0);
+  const {closeBuyWindow} = useContext(GeneralContext);
 
   const handleBuyClick = () => {
+    try{
     axios.post("https://zerodhaclone-bd.onrender.com/newOrder", {
       name: uid,
       qty: stockQuantity,
@@ -19,11 +21,14 @@ const BuyActionWindow = ({ uid }) => {
       mode: "BUY",
     });
 
-    GeneralContext.closeBuyWindow();
+    closeBuyWindow();
+    } catch (err) {
+      console.error("Buy failed", err);
+    }
   };
 
   const handleCancelClick = () => {
-    GeneralContext.closeBuyWindow();
+    closeBuyWindow();
   };
 
   return (
