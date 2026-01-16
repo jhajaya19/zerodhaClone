@@ -11,7 +11,7 @@ const SellActionWindow = ({uid})=>{
     const {closeSellWindow} = useContext(GeneralContext);
 
     const handleSellClick = () =>{
-        axios.post("https://zerodha-bd.netlify.app/newOrder",{
+        axios.post("https://zerodhaclone-bd.onrender.com/newOrder",{
             name:uid,
             qty:stockQuantity,
             price:stockPrice,

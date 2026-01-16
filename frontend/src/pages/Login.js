@@ -31,7 +31,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "https://zerodha-bd.netlify.app/login",
+        "https://zerodhaclone-bd.onrender.com/login",
         {
           ...inputValue,
         },

@@ -32,7 +32,7 @@ const Signup = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "https://zerodha-bd.netlify.app/signup",
+        "https://zerodhaclone-bd.onrender.com/signup",
         {
           ...inputValue,
         },

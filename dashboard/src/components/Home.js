@@ -30,7 +30,7 @@ const Home = () => {
       }
 
       try {
-        const res = await fetch("https://zerodha-bd.netlify.app/verify", {
+        const res = await fetch("https://zerodhaclone-bd.onrender.com/verify", {
           method: "POST",
           headers: {
             Authorization: `Bearer ${token}`,

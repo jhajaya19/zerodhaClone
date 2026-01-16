@@ -6,7 +6,7 @@ import { useState } from "react";
 const Orders = () => {
 
   const [allOrders , setAllOrders] = useState([]);
-  useEffect( ()=>{axios.get("https://zerodha-bd.netlify.app/getOrders").then((res)=>{
+  useEffect( ()=>{axios.get("https://zerodhaclone-bd.onrender.com/getOrders").then((res)=>{
     setAllOrders(res.data);
  })},[]);
   return (
