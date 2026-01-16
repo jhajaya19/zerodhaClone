@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "build": "echo 'No static build required'"
   },
   "author": "",
   "license": "ISC",
@@ -24,6 +24,7 @@
     "mongoose": "^9.1.2",
     "passport": "^0.7.0",
     "passport-local": "^1.0.0",
-    "passport-local-mongoose": "^9.0.1"
+    "passport-local-mongoose": "^9.0.1",
+    "serverless-http": "^4.0.0"
   }
 }
