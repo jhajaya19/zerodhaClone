@@ -6,13 +6,13 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser")
 const cors = require("cors")
 const cookieParser = require("cookie-parser");
-const authRoute = require("./routes/AuthRoute");
+const authRoute = require("../../routes/AuthRoute");
 
-const { Signup, Login } = require("./controllers/AuthController");
-const { userVerification } = require('./middlewares/AuthMiddleware');
-const { HoldingsModel } = require("./models/HoldingsModel");
-const { PositionsModel } = require("./models/PositionsModel");
-const {OrdersModel} = require("./models/OrdersModel");
+const { Signup, Login } = require("../../controllers/AuthController");
+const { userVerification } = require('../../middlewares/AuthMiddleware');
+const { HoldingsModel } = require("../../models/HoldingsModel");
+const { PositionsModel } = require("../../models/PositionsModel");
+const {OrdersModel} = require("../../models/OrdersModel");
 
 const PORT = process.env.PORT || 3002;
 const uri = process.env.MONGO_URL;
