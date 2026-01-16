@@ -18,7 +18,7 @@ const Menu = () => {
   const activeMenuClass = "menu selected";
 
   const goToFrontend = () => {
-    window.location.href = "https://zerodha-ft.netlify.app";
+    window.location.href = "https://zerodha-frontend-4d9w.onrender.com/";
   };
 
 

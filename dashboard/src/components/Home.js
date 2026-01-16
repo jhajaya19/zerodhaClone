@@ -24,7 +24,7 @@ const Home = () => {
       console.log("Stored token:", token); 
 
       if (!token) {
-        window.location.href = "https://zerodha-ft.netlify.app";
+        window.location.href = "https://zerodha-frontend-4d9w.onrender.com/";
         
         return;
       }
@@ -44,11 +44,11 @@ const Home = () => {
         if (res.status === 200) {
           setIsVerified(true);
         } else {
-          window.location.href = "https://zerodha-ft.netlify.app";
+          window.location.href = "https://zerodha-frontend-4d9w.onrender.com/";
         }
       } catch (err) {
         console.error("Verification failed:", err);
-        window.location.href = "https://zerodha-ft.netlify.app/";
+        window.location.href = "https://zerodha-frontend-4d9w.onrender.com/";
       }
     };
 

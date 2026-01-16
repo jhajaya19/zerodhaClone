@@ -46,7 +46,7 @@ const Login = () => {
         // window.location.href = `http://localhost:3000`
         if (token) {
           localStorage.setItem("token", token); 
-          window.location.href = `https://zerodha-db.netlify.app?token=${token}`; 
+          window.location.href = `https://zerodha-dashboard-tdz8.onrender.com?token=${token}`; 
         }  
       } else {
         handleError(message);
