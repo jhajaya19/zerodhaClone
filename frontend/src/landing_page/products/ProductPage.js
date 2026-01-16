@@ -9,7 +9,7 @@ function ProductPage() {
     <>
       <Hero />
       <LeftSection
-        imageURL="media\images\kite.png"
+        imageURL="media/images/kite.png"
         productName="Kite"
         productDescription="Our ultra-fast flagship trading platform with streaming market data, advanced charts, an elegant UI, and more. Enjoy the Kite experience seamlessly on your Android and iOS devices."
         tryDemo=""
@@ -18,13 +18,13 @@ function ProductPage() {
         appStore=""
       />
       <RightSection
-        imageURL="media\images\products-console.png"
+        imageURL="media/images/products-console.png"
         productName="Console"
         productDescription="The central dashboard for your Zerodha account. Gain insights into your trades and investments with in-depth reports and visualisations."
         learnMore=""
       />
       <LeftSection
-        imageURL="media\images\coin.png"
+        imageURL="media/images/coin.png"
         productName="Coin"
         productDescription="Buy direct mutual funds online, commission-free, delivered directly to your Demat account. Enjoy the investment experience on your Android and iOS devices."
         tryDemo=""

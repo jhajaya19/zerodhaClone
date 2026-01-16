@@ -70,7 +70,7 @@ function Navbar() {
                 <li className="nav-item">
                   <a
                     className="nav-link"
-                    href="https://zerodha-ft.netlify.app/"
+                    href="https://zerodha-db.netlify.app/"
                     rel="noopener noreferrer"
                   >
                     Dashboard
